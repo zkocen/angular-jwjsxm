@@ -1,0 +1,10 @@
+<div class="block" mode="sideBarMode$ | async"
+        [ngStyle.xs]="{'width': '100%'}"
+        [ngStyle.sm]="{'width.px': '270'}"
+        [ngStyle.md]="{'width.px': '400'}"
+        [ngStyle.lg]="{'width.px': '500'}"
+        [ngStyle.xl]="{'width.px': '700'}"
+>
+brekpoint: {{sideBarMode$ | async}}<br/>
+media: {{media$ | async}}
+</div>
