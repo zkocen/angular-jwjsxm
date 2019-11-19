@@ -16,4 +16,11 @@ export class AppComponent  {
             this.media$.next(x[0].mqAlias)
         );
     }
+
+    public breakpoint$ = this.media$.pipe(
+        map(m => {
+            return m;
+        })
+    );
+
 }

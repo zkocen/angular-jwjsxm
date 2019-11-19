@@ -3,5 +3,6 @@
         [ngStyle.sm]="{'width.px': 270, 'background': 'green'}"
         [ngStyle.gt-sm]="{'width.px': 600, 'background': 'beige'}"
 >
+breakpoint: {{breakpoint$ | async}} <br/>
 media: {{media$ | async}}
 </div>
