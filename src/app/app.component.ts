@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { delay, map, tap } from 'rxjs/operators';
-import { MatSidenav } from '@angular/material/sidenav';
 import { MediaObserver } from '@angular/flex-layout';
 import { BehaviorSubject, combineLatest, Subject } from 'rxjs';
 
@@ -10,9 +9,6 @@ import { BehaviorSubject, combineLatest, Subject } from 'rxjs';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  public mode: string;
-  public sidebar: MatSidenav;
-  public breakpoint: any;
   public media$ = new BehaviorSubject<string>('xs');
 
       public constructor(media: MediaObserver) {
@@ -23,8 +19,6 @@ export class AppComponent  {
 
     public sideBarMode$ = this.media$.pipe(
         map(m => {
-            this.breakpoint = m;
-            console.log('this.breakpoint', this.breakpoint);
             return m === 'xs' || m === 'sm' ? 'over' : 'side';
         })
     );
