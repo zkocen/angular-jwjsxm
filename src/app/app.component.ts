@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { delay, map, tap } from 'rxjs/operators';
 import { MediaObserver } from '@angular/flex-layout';
 import { BehaviorSubject, combineLatest, Subject } from 'rxjs';
 
@@ -16,11 +15,5 @@ export class AppComponent  {
             this.media$.next(x[0].mqAlias)
         );
     }
-
-    public breakpoint$ = this.media$.pipe(
-        map(m => {
-            return m;
-        })
-    );
 
 }
