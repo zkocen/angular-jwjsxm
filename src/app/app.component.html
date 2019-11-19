@@ -1,8 +1,7 @@
 <div class="block" mode="sideBarMode$ | async"
-        [ngStyle.lt-sm]="{'width': '100%'}"
-        [ngStyle.sm]="{'width.px': 270}"
-        [ngStyle.gt-sm]="{'width.px': 320}"
+        [ngStyle.lt-sm]="{'width': '100%', 'background': 'red'}"
+        [ngStyle.sm]="{'width.px': 270, 'background': 'green'}"
+        [ngStyle.gt-sm]="{'width.px': 600, 'background': 'beige'}"
 >
-brekpoint: {{sideBarMode$ | async}}<br/>
 media: {{media$ | async}}
 </div>

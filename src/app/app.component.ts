@@ -16,11 +16,4 @@ export class AppComponent  {
             this.media$.next(x[0].mqAlias)
         );
     }
-
-    public sideBarMode$ = this.media$.pipe(
-        map(m => {
-            return m === 'xs' || m === 'sm' ? 'over' : 'side';
-        })
-    );
-
 }
